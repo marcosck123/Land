@@ -1,0 +1,423 @@
+.page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 36px;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 0 52px;
+  border-bottom: 1px solid var(--border);
+}
+.navName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: var(--text);
+}
+.navLinks {
+  display: flex;
+  gap: 36px;
+}
+.navLinks a {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.navLinks a:hover {
+  color: var(--text);
+}
+
+/* HERO */
+.hero {
+  padding: 88px 0 72px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 72px;
+  align-items: end;
+  animation: fadeUp 0.8s ease both;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 24px;
+}
+.heroTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1.02;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+.heroTitle em {
+  font-style: italic;
+  color: var(--accent);
+}
+.heroDesc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 340px;
+}
+.heroRight {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-bottom: 4px;
+  animation: fadeUp 0.8s 0.15s ease both;
+}
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 40px;
+  padding: 9px 18px;
+  font-size: 11px;
+  color: var(--sage);
+  width: fit-content;
+  letter-spacing: 0.06em;
+}
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sage);
+  animation: pulse 2.5s infinite;
+  flex-shrink: 0;
+}
+.heroQuote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.55;
+  border-left: 1px solid var(--accent2);
+  padding-left: 20px;
+}
+.githubBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 13px 26px;
+  border-radius: 3px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: background 0.2s;
+  width: fit-content;
+  font-weight: 500;
+}
+.githubBtn:hover {
+  background: #D4B87A;
+}
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: var(--border);
+}
+
+/* STACK */
+.stackSection {
+  padding: 68px 0;
+}
+.sectionLabel {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 44px;
+}
+.stackGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+.techCard {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 22px 10px;
+  text-align: center;
+  transition: all 0.25s;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.techCard:hover {
+  background: var(--bg2);
+  border-color: var(--border2);
+  transform: translateY(-4px);
+}
+.techIcon {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
+.techName {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* ABOUT */
+.aboutSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 88px;
+  padding: 72px 0 80px;
+}
+.aboutTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+.aboutTitle em {
+  font-style: italic;
+  color: var(--accent);
+}
+.aboutText {
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.aboutRight {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 4px;
+}
+.factItem {
+  padding: 22px 24px;
+  background: var(--bg3);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--accent2);
+}
+.factNum {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: 1;
+}
+.factLabel {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 5px;
+  letter-spacing: 0.05em;
+}
+.ctaGhost {
+  display: inline-block;
+  background: none;
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  padding: 11px 22px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 0.06em;
+  transition: all 0.2s;
+  margin-top: 24px;
+  text-decoration: none;
+}
+.ctaGhost:hover {
+  border-color: var(--accent2);
+  color: var(--text);
+}
+
+/* PROJECTS */
+.projectsSection {
+  padding: 0 0 80px;
+  padding-top: 68px;
+}
+.projectGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 44px;
+}
+.projectCard {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 28px;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+.projectCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--accent2);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+.projectCard:hover::before {
+  transform: scaleX(1);
+}
+.projectCard:hover {
+  background: var(--bg2);
+  border-color: var(--border2);
+}
+.projectTag {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 14px;
+}
+.projectName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.projectDesc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+.projectLangs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.langTag {
+  font-size: 10px;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.06em;
+}
+.projectArrow {
+  float: right;
+  color: var(--dim);
+  font-size: 16px;
+  transition: color 0.2s;
+}
+.projectCard:hover .projectArrow {
+  color: var(--accent);
+}
+
+/* CONTACT */
+.contactSection {
+  border-top: 1px solid var(--border);
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+.contactTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.contactSub {
+  font-size: 13px;
+  color: var(--muted);
+}
+.contactBtns {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  padding: 11px 22px;
+  border-radius: 3px;
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.btnOutline:hover {
+  border-color: var(--accent2);
+  color: var(--text);
+}
+
+/* FOOTER */
+.footer {
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footerCopy {
+  font-size: 11px;
+  color: var(--dim);
+}
+.footerLoc {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 56px 0 48px;
+  }
+  .heroTitle { font-size: 44px; }
+  .aboutSection { grid-template-columns: 1fr; gap: 40px; }
+  .projectGrid { grid-template-columns: 1fr; }
+  .stackGrid { grid-template-columns: repeat(4, 1fr); }
+  .contactSection { flex-direction: column; align-items: flex-start; }
+  .navLinks { gap: 20px; }
+  .page { padding: 0 20px; }
+}
