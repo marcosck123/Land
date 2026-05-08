@@ -1,0 +1,27 @@
+/* ─── Skills Section ──────────────────────────────────────── */
+
+.skills__header { max-width: 520px; margin-bottom: var(--sp-16); }
+.skills__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--sp-8); }
+
+.skill-category { padding: var(--sp-8); background: var(--clr-bg-1); border: 1px solid var(--clr-border); border-radius: var(--r-lg); transition: border-color var(--t-base), box-shadow var(--t-base); }
+.skill-category:hover { border-color: var(--clr-border-hi); box-shadow: var(--sh-md); }
+
+.skill-category__title { font-size: var(--fs-xs); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--clr-accent); margin-bottom: var(--sp-6); display: flex; align-items: center; gap: var(--sp-2); }
+.skill-category__title svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+
+.skill-chips { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+
+.chip { display: inline-flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-sm); font-weight: 500; color: var(--clr-text-2); background: var(--clr-bg-2); border: 1px solid var(--clr-border); padding: var(--sp-2) var(--sp-4); border-radius: var(--r-full); transition: color var(--t-fast), border-color var(--t-fast), background var(--t-fast), transform var(--t-fast); will-change: transform; opacity: 0; transform: translateY(20px); }
+.chip:hover { color: var(--clr-text); border-color: var(--clr-accent-mid); background: var(--clr-accent-dim); transform: translateY(-2px); }
+
+.chip__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--clr-accent); opacity: .5; flex-shrink: 0; transition: opacity var(--t-fast); }
+.chip:hover .chip__dot { opacity: 1; }
+.chip[data-level="expert"]   .chip__dot { background: #00d4aa; opacity: 1; }
+.chip[data-level="advanced"] .chip__dot { background: #6dd4ff; }
+.chip[data-level="mid"]      .chip__dot { background: #c4a0ff; }
+
+.skills__tools { margin-top: var(--sp-16); padding-top: var(--sp-12); border-top: 1px solid var(--clr-border); }
+.skills__tools-label { font-size: var(--fs-xs); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--clr-text-3); margin-bottom: var(--sp-6); }
+.skills__tools-list { display: flex; flex-wrap: wrap; gap: var(--sp-3); }
+
+@media (max-width: 600px) { .skills__grid { grid-template-columns: 1fr; } }

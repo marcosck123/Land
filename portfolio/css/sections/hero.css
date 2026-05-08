@@ -1,0 +1,50 @@
+/* ─── Hero Section ────────────────────────────────────────── */
+
+.hero { min-height: 100dvh; display: grid; grid-template-rows: 1fr auto; padding-top: 100px; position: relative; overflow: hidden; }
+
+.hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(to right, var(--clr-border) 1px, transparent 1px), linear-gradient(to bottom, var(--clr-border) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse 80% 80% at 50% 0%, black 30%, transparent 100%); z-index: var(--z-bg); }
+
+.hero::after { content: ''; position: absolute; top: -10%; left: 50%; transform: translateX(-50%); width: 70vw; max-width: 900px; height: 50vh; background: radial-gradient(ellipse at center, rgba(0,212,170,.10) 0%, transparent 70%); pointer-events: none; z-index: var(--z-bg); }
+
+.hero__inner { display: flex; flex-direction: column; justify-content: center; padding: var(--sp-16) 0 var(--sp-12); }
+
+.hero__badge { display: inline-flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-xs); font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--clr-accent); background: var(--clr-accent-dim); border: 1px solid var(--clr-accent-mid); padding: var(--sp-2) var(--sp-4); border-radius: var(--r-full); width: fit-content; margin-bottom: var(--sp-8); opacity: 0; }
+
+.hero__badge-dot { width: 6px; height: 6px; background: var(--clr-accent); border-radius: 50%; animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .5; transform: scale(.7); } }
+
+.hero__name { font-family: var(--font-display); font-size: var(--fs-hero); font-weight: 900; line-height: .95; letter-spacing: -.03em; color: var(--clr-text); margin-bottom: var(--sp-4); overflow: hidden; }
+.hero__name .split-word { overflow: hidden; display: inline-block; margin-right: .18em; }
+.hero__name .split-char { display: inline-block; will-change: transform; }
+
+.hero__line { width: 100%; max-width: 560px; height: 1.5px; background: linear-gradient(to right, var(--clr-accent), transparent); margin: var(--sp-6) 0; transform-origin: left; transform: scaleX(0); }
+
+.hero__role { font-size: var(--fs-lg); font-weight: 300; color: var(--clr-text-2); margin-bottom: var(--sp-6); opacity: 0; }
+.hero__role strong { font-weight: 600; color: var(--clr-text); }
+
+.hero__desc { max-width: 520px; font-size: var(--fs-base); line-height: 1.75; color: var(--clr-text-2); margin-bottom: var(--sp-10); opacity: 0; }
+
+.hero__ctas { display: flex; align-items: center; gap: var(--sp-4); flex-wrap: wrap; opacity: 0; }
+
+.btn { display: inline-flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-sm); font-weight: 600; padding: var(--sp-4) var(--sp-8); border-radius: var(--r-full); transition: transform var(--t-base), box-shadow var(--t-base), background var(--t-fast); }
+.btn:hover  { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+.btn--primary { background: var(--clr-accent); color: var(--clr-bg); }
+.btn--primary:hover { background: var(--clr-accent-dark); box-shadow: 0 8px 30px rgba(0,212,170,.30); }
+.btn--ghost { color: var(--clr-text); border: 1px solid var(--clr-border-hi); background: transparent; }
+.btn--ghost:hover { background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.22); }
+.btn__icon { display: inline-block; transition: transform var(--t-base); }
+.btn:hover .btn__icon { transform: translateX(3px); }
+
+.hero__scroll { padding-bottom: var(--sp-10); opacity: 0; }
+
+.hero__socials { display: flex; flex-direction: column; align-items: center; gap: var(--sp-4); position: absolute; left: var(--gutter); bottom: var(--sp-12); opacity: 0; }
+.hero__socials::after { content: ''; display: block; width: 1px; height: 60px; background: var(--clr-border-hi); }
+.hero__social-link { font-size: var(--fs-xs); letter-spacing: .14em; text-transform: uppercase; color: var(--clr-text-3); writing-mode: vertical-rl; transition: color var(--t-fast), transform var(--t-fast); }
+.hero__social-link:hover { color: var(--clr-accent); transform: translateY(-3px); }
+
+@media (max-width: 768px) {
+  .hero__socials { display: none; }
+  .hero__name { font-size: clamp(2.8rem, 12vw, 5rem); }
+  .hero__ctas { flex-direction: column; align-items: flex-start; }
+}

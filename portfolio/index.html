@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="[Seu Nome] — Desenvolvedor Full Stack especializado em criar experiências web modernas e de alta performance." />
+  <meta property="og:title"       content="[Seu Nome] | Desenvolvedor Full Stack" />
+  <meta property="og:description" content="Portfolio de desenvolvimento web com foco em performance e design." />
+  <meta property="og:type"        content="website" />
+  <title>[Seu Nome] | Dev Full Stack</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/sections/hero.css" />
+  <link rel="stylesheet" href="css/sections/about.css" />
+  <link rel="stylesheet" href="css/sections/skills.css" />
+  <link rel="stylesheet" href="css/sections/projects.css" />
+  <link rel="stylesheet" href="css/sections/experience.css" />
+  <link rel="stylesheet" href="css/sections/contact.css" />
+</head>
+<body>
+
+  <!-- ── Custom cursor ──────────────────── -->
+  <div class="cursor cursor--dot"  aria-hidden="true"></div>
+  <div class="cursor cursor--ring" aria-hidden="true"></div>
+
+  <!-- ── Navigation ─────────────────────── -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Menu principal">
+      <a href="#hero" class="nav__logo" aria-label="Ir ao início">[SN]</a>
+
+      <ul class="nav__links" id="nav-links" role="list">
+        <li><a href="#about"      class="nav__link">Sobre</a></li>
+        <li><a href="#skills"     class="nav__link">Skills</a></li>
+        <li><a href="#projects"   class="nav__link">Projetos</a></li>
+        <li><a href="#experience" class="nav__link">Experiência</a></li>
+        <li><a href="#contact"    class="nav__cta" data-magnetic="0.3">Contato</a></li>
+      </ul>
+
+      <button
+        class="nav__toggle"
+        aria-controls="nav-links"
+        aria-expanded="false"
+        aria-label="Abrir menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section id="hero" class="hero" aria-label="Introdução">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__badge" aria-label="Disponível para oportunidades">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            Disponível para projetos
+          </div>
+          <h1 class="hero__name" aria-label="[Seu Nome]">[Seu<br>Nome]</h1>
+          <div class="hero__line" aria-hidden="true"></div>
+          <p class="hero__role"><strong>Desenvolvedor Full Stack</strong> &nbsp;·&nbsp; Web &amp; Mobile</p>
+          <p class="hero__desc">Construo interfaces rápidas, acessíveis e esteticamente impecáveis. Foco em performance, código limpo e experiências que encantam usuários.</p>
+          <div class="hero__ctas">
+            <a href="#projects" class="btn btn--primary" data-magnetic="0.2">Ver projetos <span class="btn__icon" aria-hidden="true">↓</span></a>
+            <a href="#contact" class="btn btn--ghost" data-magnetic="0.2">Entre em contato</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="hero__scroll">
+          <div class="scroll-indicator" aria-hidden="true">
+            <div class="scroll-indicator__line"></div>
+            <span>scroll</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__socials" aria-label="Redes sociais">
+        <a href="https://github.com/[seuusuario]" class="hero__social-link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/[seuusuario]" class="hero__social-link" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about section" aria-label="Sobre mim">
+      <div class="container">
+        <div class="about__inner">
+          <div class="about__content">
+            <p class="section__eyebrow" aria-hidden="true">Sobre mim</p>
+            <h2 class="section__title">Código que<br><em>importa</em></h2>
+            <div class="about__paragraphs">
+              <p class="about__p">Sou [Seu Nome], desenvolvedor Full Stack com paixão por criar produtos digitais que combinam <strong>performance técnica</strong> com design intuitivo. Trabalho tanto no front quanto no back, do wireframe ao deploy.</p>
+              <p class="about__p">Minha abordagem é simples: <em>entender o problema antes de escrever uma linha</em>. Acredito que o melhor código é aquele que nunca precisa ser explicado — só precisa funcionar.</p>
+              <p class="about__p">Quando não estou codando, estou lendo sobre arquitetura de software, contribuindo para open source ou explorando formas novas de visualizar dados.</p>
+            </div>
+            <div class="about__stats">
+              <div class="about__stat"><div class="about__stat-num"><span class="counter" data-target="3" data-suffix="+">0+</span></div><p class="about__stat-label">Anos de experiência</p></div>
+              <div class="about__stat"><div class="about__stat-num"><span class="counter" data-target="20" data-suffix="+">0+</span></div><p class="about__stat-label">Projetos entregues</p></div>
+              <div class="about__stat"><div class="about__stat-num"><span class="counter" data-target="8" data-suffix="k+">0k+</span></div><p class="about__stat-label">Commits no GitHub</p></div>
+            </div>
+          </div>
+          <div class="about__visual" aria-hidden="true">
+            <div class="about__img-wrap">
+              <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?w=600&q=80" alt="[Seu Nome] trabalhando" class="about__img" loading="lazy" />
+            </div>
+            <div class="about__img-frame"></div>
+            <div class="about__tag">
+              <span class="about__tag-icon">⚡</span>
+              <div class="about__tag-text">
+                <span class="about__tag-label">Open to work</span>
+                <span class="about__tag-sub">Remoto &amp; Híbrido</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills section" aria-label="Stack técnica">
+      <div class="container">
+        <div class="skills__header">
+          <p class="section__eyebrow">Stack</p>
+          <h2 class="section__title">Ferramentas &amp; Tecnologias</h2>
+        </div>
+        <div class="skills__grid">
+          <div class="skill-category">
+            <h3 class="skill-category__title"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Frontend</h3>
+            <ul class="skill-chips" role="list">
+              <li><span class="chip" data-level="expert"><span class="chip__dot"></span>HTML5</span></li>
+              <li><span class="chip" data-level="expert"><span class="chip__dot"></span>CSS3</span></li>
+              <li><span class="chip" data-level="expert"><span class="chip__dot"></span>JavaScript</span></li>
+              <li><span class="chip" data-level="advanced"><span class="chip__dot"></span>TypeScript</span></li>
+              <li><span class="chip" data-level="advanced"><span class="chip__dot"></span>React</span></li>
+              <li><span class="chip" data-level="advanced"><span class="chip__dot"></span>Next.js</span></li>
+              <li><span class="chip" data-level="mid"><span class="chip__dot"></span>GSAP</span></li>
+              <li><span class="chip" data-level="mid"><span class="chip__dot"></span>Tailwind CSS</span></li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category__title"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Backend</h3>
+            <ul class="skill-chips" role="list">
+              <li><span class="chip" data-level="advanced"><span class="chip__dot"></span>Node.js</span></li>
+              <li><span class="chip" data-level="advanced"><span class="chip__dot"></span>Express</span></li>
+              <li><span class="chip" data-level="mid"><span class="chip__dot"></span>Python</span></li>
+              <li><span class="chip" data-level="mid"><span class="chip__dot"></span>PostgreSQL</span></li>
+              <li><span class="chip" data-level="mid"><span class="chip__dot"></span>MongoDB</span></li>
+              <li><span class="chip" data-level="mid"><span class="chip__dot"></span>REST APIs</span></li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category__title"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>DevOps &amp; Tools</h3>
+            <ul class="skill-chips" role="list">
+              <li><span class="chip" data-level="expert"><span class="chip__dot"></span>Git / GitHub</span></li>
+              <li><span class="chip" data-level="advanced"><span class="chip__dot"></span>Docker</span></li>
+              <li><span class="chip" data-level="mid"><span class="chip__dot"></span>CI/CD</span></li>
+              <li><span class="chip" data-level="mid"><span class="chip__dot"></span>Vercel</span></li>
+              <li><span class="chip" data-level="mid"><span class="chip__dot"></span>Linux</span></li>
+              <li><span class="chip" data-level="mid"><span class="chip__dot"></span>Figma</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="skills__tools">
+          <p class="skills__tools-label">Também trabalhei com</p>
+          <ul class="skills__tools-list skill-chips" role="list">
+            <li><span class="chip"><span class="chip__dot"></span>GraphQL</span></li>
+            <li><span class="chip"><span class="chip__dot"></span>Redis</span></li>
+            <li><span class="chip"><span class="chip__dot"></span>Prisma</span></li>
+            <li><span class="chip"><span class="chip__dot"></span>Jest</span></li>
+            <li><span class="chip"><span class="chip__dot"></span>Vitest</span></li>
+            <li><span class="chip"><span class="chip__dot"></span>AWS S3</span></li>
+            <li><span class="chip"><span class="chip__dot"></span>Supabase</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects section" aria-label="Projetos">
+      <div class="container">
+        <div class="projects__header">
+          <div>
+            <p class="section__eyebrow">Portfólio</p>
+            <h2 class="section__title">Projetos selecionados</h2>
+          </div>
+          <a href="https://github.com/[seuusuario]" class="projects__all-link" target="_blank" rel="noopener">Ver todos no GitHub →</a>
+        </div>
+        <div class="projects__grid">
+          <article class="project-card">
+            <div class="project-card__media">
+              <div class="project-card__placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+              <div class="project-card__overlay">
+                <a href="#" class="project-card__overlay-btn" target="_blank" rel="noopener">Demo ao vivo ↗</a>
+                <a href="#" class="project-card__overlay-btn" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__number">01 — Destaque</p>
+              <h3 class="project-card__title">[Nome do Projeto Principal]</h3>
+              <p class="project-card__desc">Descrição do projeto principal. Explique o problema resolvido, as decisões técnicas e o impacto gerado.</p>
+              <ul class="project-card__tags" role="list">
+                <li><span class="project-card__tag">Next.js</span></li>
+                <li><span class="project-card__tag">TypeScript</span></li>
+                <li><span class="project-card__tag">PostgreSQL</span></li>
+                <li><span class="project-card__tag">AWS</span></li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__media">
+              <div class="project-card__placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+              <div class="project-card__overlay">
+                <a href="#" class="project-card__overlay-btn" target="_blank" rel="noopener">Demo ↗</a>
+                <a href="#" class="project-card__overlay-btn" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__number">02</p>
+              <h3 class="project-card__title">[Projeto 2]</h3>
+              <p class="project-card__desc">Breve descrição do segundo projeto e seu impacto.</p>
+              <ul class="project-card__tags" role="list">
+                <li><span class="project-card__tag">React</span></li>
+                <li><span class="project-card__tag">Node.js</span></li>
+                <li><span class="project-card__tag">MongoDB</span></li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__media">
+              <div class="project-card__placeholder" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+              <div class="project-card__overlay">
+                <a href="#" class="project-card__overlay-btn" target="_blank" rel="noopener">Demo ↗</a>
+                <a href="#" class="project-card__overlay-btn" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__number">03</p>
+              <h3 class="project-card__title">[Projeto 3]</h3>
+              <p class="project-card__desc">Breve descrição do terceiro projeto e seu impacto.</p>
+              <ul class="project-card__tags" role="list">
+                <li><span class="project-card__tag">Python</span></li>
+                <li><span class="project-card__tag">FastAPI</span></li>
+                <li><span class="project-card__tag">Docker</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="experience section" aria-label="Experiência profissional">
+      <div class="container">
+        <div class="experience__inner">
+          <div class="experience__aside">
+            <p class="section__eyebrow">Trajetória</p>
+            <h2 class="section__title">Experiência</h2>
+            <p>Ambientes de trabalho que moldaram minha forma de pensar em software — desde startups até projetos de maior escala.</p>
+          </div>
+          <div class="timeline" role="list">
+            <div class="timeline__track-ghost" aria-hidden="true"></div>
+            <div class="timeline__track" aria-hidden="true"></div>
+            <article class="timeline-item" role="listitem">
+              <div class="timeline-item__head">
+                <h3 class="timeline-item__company">[Empresa / Freelance]</h3>
+                <span class="timeline-item__period">2023 — atual</span>
+              </div>
+              <p class="timeline-item__role">Desenvolvedor Full Stack Sênior</p>
+              <p class="timeline-item__desc">Liderança técnica no desenvolvimento de [tipo de produto], trabalhando com equipe multidisciplinar para entregar features de alta qualidade.</p>
+              <ul class="timeline-item__list">
+                <li>Reduziu tempo de carregamento em 40% com otimizações de bundle e SSR</li>
+                <li>Migrou base de dados legada para PostgreSQL com zero downtime</li>
+                <li>Implementou CI/CD completo com GitHub Actions e testes automatizados</li>
+              </ul>
+              <ul class="timeline-item__stack skill-chips" role="list">
+                <li><span class="chip"><span class="chip__dot"></span>Next.js</span></li>
+                <li><span class="chip"><span class="chip__dot"></span>TypeScript</span></li>
+                <li><span class="chip"><span class="chip__dot"></span>AWS</span></li>
+              </ul>
+            </article>
+            <article class="timeline-item" role="listitem">
+              <div class="timeline-item__head">
+                <h3 class="timeline-item__company">[Empresa 2]</h3>
+                <span class="timeline-item__period">2022 — 2023</span>
+              </div>
+              <p class="timeline-item__role">Desenvolvedor Frontend Pleno</p>
+              <p class="timeline-item__desc">Desenvolvimento e manutenção de aplicações web de grande escala, focado em performance e acessibilidade.</p>
+              <ul class="timeline-item__list">
+                <li>Construiu design system do zero adotado por toda a organização</li>
+                <li>Aumentou cobertura de testes unitários de 20% para 85%</li>
+              </ul>
+              <ul class="timeline-item__stack skill-chips" role="list">
+                <li><span class="chip"><span class="chip__dot"></span>React</span></li>
+                <li><span class="chip"><span class="chip__dot"></span>Storybook</span></li>
+                <li><span class="chip"><span class="chip__dot"></span>Jest</span></li>
+              </ul>
+            </article>
+            <article class="timeline-item" role="listitem">
+              <div class="timeline-item__head">
+                <h3 class="timeline-item__company">[Empresa 3 / Estágio]</h3>
+                <span class="timeline-item__period">2021 — 2022</span>
+              </div>
+              <p class="timeline-item__role">Desenvolvedor Junior</p>
+              <p class="timeline-item__desc">Primeiros passos profissionais, aprendendo na prática como entregar software de qualidade em ambiente ágil.</p>
+              <ul class="timeline-item__list">
+                <li>Colaborou em feature de checkout que aumentou conversão em 15%</li>
+                <li>Refatorou componentes legados para React funcional</li>
+              </ul>
+              <ul class="timeline-item__stack skill-chips" role="list">
+                <li><span class="chip"><span class="chip__dot"></span>JavaScript</span></li>
+                <li><span class="chip"><span class="chip__dot"></span>React</span></li>
+                <li><span class="chip"><span class="chip__dot"></span>Node.js</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact section" aria-label="Contato">
+      <div class="container">
+        <div class="contact__inner">
+          <div class="contact__info">
+            <p class="section__eyebrow">Contato</p>
+            <h2 class="contact__tagline">Vamos construir<br>algo <em>incrível</em><br>juntos?</h2>
+            <p class="contact__desc">Estou aberto a oportunidades de emprego, freelas e parcerias. Manda uma mensagem e eu respondo em até 24h.</p>
+            <a href="mailto:[seuemail]@gmail.com" class="contact__email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              [seuemail]@gmail.com
+            </a>
+            <nav class="contact__socials" aria-label="Redes sociais">
+              <a href="https://github.com/[seuusuario]" class="social-link" target="_blank" rel="noopener" aria-label="GitHub" data-magnetic="0.35">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+              <a href="https://linkedin.com/in/[seuusuario]" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn" data-magnetic="0.35">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="https://twitter.com/[seuusuario]" class="social-link" target="_blank" rel="noopener" aria-label="Twitter / X" data-magnetic="0.35">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M4 20L20 4"/></svg>
+              </a>
+            </nav>
+          </div>
+          <div class="contact__form">
+            <form class="contact-form" novalidate autocomplete="off">
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="name">Nome</label>
+                  <input type="text" id="name" name="name" class="form__input" placeholder="Seu nome" required />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="email">E-mail</label>
+                  <input type="email" id="email" name="email" class="form__input" placeholder="voce@email.com" required />
+                </div>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="subject">Assunto</label>
+                <input type="text" id="subject" name="subject" class="form__input" placeholder="Sobre o que você quer conversar?" />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="message">Mensagem</label>
+                <textarea id="message" name="message" class="form__textarea" placeholder="Conte um pouco sobre o seu projeto ou oportunidade…" required></textarea>
+              </div>
+              <button type="submit" class="btn form__submit" data-magnetic="0.15">
+                Enviar mensagem
+                <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+              <div class="form__status" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> [Seu Nome] — Feito com HTML, CSS &amp; JS</p>
+    <nav class="footer__links" aria-label="Links do rodapé">
+      <a href="#hero">Início</a>
+      <a href="#projects">Projetos</a>
+      <a href="#contact">Contato</a>
+    </nav>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/animations/cursor.js"></script>
+  <script src="js/animations/hero.js"></script>
+  <script src="js/animations/scroll.js"></script>
+  <script src="js/animations/projects.js"></script>
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
