@@ -1,0 +1,92 @@
+/* ─── Marquee Strip ────────────────────────────────────────── */
+
+.marquee {
+  overflow: hidden;
+  padding: var(--sp-5) 0;
+  border-top:    1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+  background: var(--clr-bg);
+  position: relative;
+  z-index: 1;
+}
+
+.marquee--light {
+  background: var(--clr-bg-1);
+}
+
+.marquee--accent {
+  background: var(--clr-bg);
+  border-color: var(--clr-accent-mid);
+}
+
+/* Track: two groups side by side so the loop is seamless */
+.marquee__track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  /* animation applied by JS via GSAP or CSS */
+}
+
+.marquee__group {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-6);
+  flex-shrink: 0;
+  padding-right: var(--sp-6);
+}
+
+.marquee__word {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--clr-text-3);
+  transition: color var(--t-fast);
+}
+
+.marquee--accent .marquee__word {
+  color: var(--clr-accent);
+  opacity: .6;
+}
+
+.marquee__sep {
+  color: var(--clr-accent);
+  font-size: .7rem;
+  opacity: .8;
+  flex-shrink: 0;
+}
+
+/* Reverse direction variant */
+.marquee--reverse .marquee__track {
+  flex-direction: row-reverse;
+}
+
+/* Pause on hover */
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+/* Fade edges */
+.marquee::before,
+.marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--clr-bg), transparent);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--clr-bg), transparent);
+}
+
+.marquee--light::before { background: linear-gradient(to right,  var(--clr-bg-1), transparent); }
+.marquee--light::after  { background: linear-gradient(to left,   var(--clr-bg-1), transparent); }

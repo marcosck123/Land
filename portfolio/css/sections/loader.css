@@ -1,0 +1,95 @@
+/* ─── Page Loader ─────────────────────────────────────────── */
+
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: var(--clr-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--sp-12) var(--gutter);
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* Large number */
+.loader__counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: baseline;
+  gap: .05em;
+  user-select: none;
+  pointer-events: none;
+}
+
+.loader__num {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 20vw, 16rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -.05em;
+  color: var(--clr-text);
+  display: block;
+  min-width: 3ch;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.loader__pct {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--clr-accent);
+  letter-spacing: -.02em;
+}
+
+/* Bottom bar */
+.loader__bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--clr-border);
+  overflow: hidden;
+}
+
+.loader__bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, var(--clr-accent-dark), var(--clr-accent));
+  transform-origin: left;
+}
+
+/* Bottom label */
+.loader__label {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--clr-text-3);
+  position: absolute;
+  bottom: var(--sp-6);
+  left: var(--gutter);
+}
+
+/* Site name top-left */
+.loader__brand {
+  position: absolute;
+  top: var(--sp-6);
+  left: var(--gutter);
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--clr-accent);
+  letter-spacing: -.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader { display: none; }
+}

@@ -1,43 +1,41 @@
 /* ─── Entry Point ───────────────────────────────────────────── */
 
 onReady(() => {
-  /* ── GSAP plugin registration ────────── */
   gsap.registerPlugin(ScrollTrigger);
 
   /* ── Lenis smooth scroll ─────────────── */
   let lenis;
   if (!prefersReducedMotion()) {
     lenis = new Lenis({
-      duration: 1.2,
+      duration:        1.2,
       easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       touchMultiplier: 1.5,
-      infinite: false,
     });
 
-    /* Wire Lenis to GSAP ticker for perfect sync */
     gsap.ticker.add(time => lenis.raf(time * 1000));
     gsap.ticker.lagSmoothing(0);
-
-    /* Keep ScrollTrigger in sync */
     lenis.on('scroll', ScrollTrigger.update);
   }
 
-  /* ── Animations ──────────────────────── */
-  initHeroAnimations();
-  initScrollAnimations();
-  initProjectAnimations();
+  /* ── Loader runs first, then the rest ── */
+  initLoader(() => {
+    /* Hero animations start right after loader reveals */
+    initHeroAnimations();
 
-  /* ── Custom cursor ───────────────────── */
+    /* Small tick so hero timeline is well underway before scroll inits */
+    gsap.delayedCall(.2, () => {
+      initScrollAnimations();
+      initProjectAnimations();
+      initMarquees();
+    });
+  });
+
+  /* These don't need the loader */
   new CustomCursor();
-
-  /* ── Navigation ──────────────────────── */
   initNav();
   initNavScroll();
-
-  /* ── Contact form ────────────────────── */
   initContactForm();
 
-  /* ── Cleanup on unload ───────────────── */
   window.addEventListener('beforeunload', () => {
     lenis?.destroy();
     ScrollTrigger.killAll();
@@ -57,7 +55,6 @@ function initNav() {
     document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
-  /* Close on link click */
   links.querySelectorAll('.nav__link').forEach(link => {
     link.addEventListener('click', () => {
       links.classList.remove('is-open');
@@ -77,10 +74,10 @@ function initContactForm() {
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('.form__submit');
-    btn.disabled = true;
+    btn.disabled    = true;
     btn.textContent = 'Enviando…';
 
-    /* Simulate send — replace with real fetch/emailjs */
+    /* Replace with real fetch / EmailJS */
     await new Promise(r => setTimeout(r, 1400));
 
     if (status) {
@@ -88,7 +85,7 @@ function initContactForm() {
       status.className   = 'form__status is-success';
     }
     form.reset();
-    btn.disabled = false;
+    btn.disabled    = false;
     btn.textContent = 'Enviar mensagem';
   });
 }
